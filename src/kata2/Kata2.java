@@ -4,13 +4,13 @@ import java.util.HashMap;
 public class Kata2 {
 
     public static void main(String[] args) {
-        int[] vector = {2, 1, 3, 1, 4, 6, 100, 100, 2, 100};
+        Double[] vector = {2.0, 1.0, 3.0, 1.0, 4.0, 6.0, 100.0, 100.0, 2.0, 100.0};
         
         Histogram histo = new Histogram(vector);
         
-        HashMap<Integer, Integer> histogram = histo.getHistogram();
+        HashMap<Double, Integer> histogram = histo.getHistogram();
         
-        for (int key : histogram.keySet()) {
+        for (Double key : histogram.keySet()) {
             System.out.println(key + " -> " + histogram.get(key));
         }
     }
