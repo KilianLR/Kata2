@@ -1,14 +1,11 @@
 package kata2;
-import java.util.HashMap;
 
 public class Kata2 {
 
     public static void main(String[] args) {
-        String[] vector = {"Yo", "Tú", "Paprika", "Paprika", "Nestlé", "Tú", "Tú"};
+        Integer[] vector = {2, 1, 3, 1, 4, 6, 100, 100, 2, 100};
         
-        Histogram histo = new Histogram(vector);
-        
-        HashMap<Object, Integer> histogram = histo.getHistogram();
+        Histogram <Object> histogram = CalculateHistogram.computeHistogram(vector);
         
         for (Object key : histogram.keySet()) {
             System.out.println(key + " -> " + histogram.get(key));
